@@ -8,6 +8,7 @@ __all__ = [
 
 _LIST_TYPES = (abc.Sequence, )
 _DICT_TYPES = (abc.Mapping, )
+_STR_TYPES = (str, bytes, )
 
 
 def compare(haystack: Any, subset: Any, strict: bool = False) -> bool:
@@ -63,7 +64,8 @@ def _compare(haystack: Any, subset: Any, partial: bool, strict: bool) -> bool:
 
     # if we compare compare two list types, we check each value of the haystack object to be equal to the
     # subset object. if we are working in partial mode, we ignore if the subset list is shorter than the haystack list.
-    elif isinstance(haystack, _LIST_TYPES) and isinstance(subset, _LIST_TYPES):
+    elif isinstance(haystack, _LIST_TYPES) and not isinstance(haystack, _STR_TYPES) \
+            and isinstance(subset, _LIST_TYPES) and not isinstance(subset, _STR_TYPES):
         return _compare_sequence(haystack, subset, partial, strict)
 
     # for any other type, we just compare the two values.

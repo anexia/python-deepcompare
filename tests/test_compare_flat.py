@@ -1,6 +1,31 @@
 import deepcompare
 
 
+def test_compare_str_with_str():
+    # test full equality
+    assert deepcompare.compare('abc', 'abc')
+
+    # test non-equality
+    assert not deepcompare.compare('abc', 'a')
+    assert not deepcompare.compare('abc', 'ab')
+    assert not deepcompare.compare('abc', 'abcd')
+
+
+def test_compare_str_in_list_with_str_in_list():
+    # test full equality
+    assert deepcompare.compare(['a', 'b', 'c', ], ['a', 'b', 'c', ])
+
+    # test partial equality
+    assert not deepcompare.compare(['a', 'b', 'c', ], ['a', ])
+    assert not deepcompare.compare(['a', 'b', 'c', ], ['a', 'b', ])
+    assert not deepcompare.compare(['a', 'b', 'c', ], ['a', 'c', ])
+
+    # test non-equality
+    assert not deepcompare.compare(['a', 'b', 'c', ], ['c', 'b', 'a', ])
+    assert not deepcompare.compare(['a', 'b', 'c', ], ['a', 'c', 'b', ])
+    assert not deepcompare.compare(['a', 'b', 'c', ], ['a', 'b', 'c', 'd', ])
+
+
 def test_compare_list_with_list():
     # test full equality
     assert deepcompare.compare([1, 2, 3, ], [1, 2, 3, ])
