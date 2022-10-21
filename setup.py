@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as fh:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='python-deepcompare',
+    name='deepcompare',
     version=os.getenv('PACKAGE_VERSION', '0.0.0').replace('refs/tags/', ''),
     packages=find_packages(),
     include_package_data=True,
@@ -17,7 +17,7 @@ setup(
     description='A library for deep comparison of data structures consisting of `dict`, `list` and `tuple`.',
     long_description=readme,
     long_description_content_type='text/markdown',
-    url='https://github.com/anexia-it/python-deepcompare',
+    url='https://github.com/anexia/python-deepcompare',
     author='Andreas Stocker',
     author_email='AStocker@anexia-it.com',
     install_requires=[],

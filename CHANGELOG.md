@@ -15,6 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Method to deep compare data structures containing `dict`, `list` and `tuple` types.
 - Method to partially deep compare data structures containing `dict`, `list` and `tuple` types.
 
-[Unreleased]: https://github.com/anexia-it/python-deepcompare/compare/1.0.1...HEAD
-[1.0.1]: https://github.com/anexia-it/python-deepcompare/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/anexia-it/python-deepcompare/releases/tag/1.0.0
+[Unreleased]: https://github.com/anexia/python-deepcompare/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/anexia/python-deepcompare/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/anexia/python-deepcompare/releases/tag/1.0.0
