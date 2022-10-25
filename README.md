@@ -1,11 +1,11 @@
-python-deepcompare
-==================
+deepcompare
+===========
 
-[![PyPI](https://badge.fury.io/py/python-deepcompare.svg)](https://pypi.org/project/python-deepcompare/)
-[![Test Status](https://github.com/anexia-it/python-deepcompare/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/anexia-it/python-deepcompare/actions/workflows/test.yml)
-[![Codecov](https://codecov.io/gh/anexia-it/python-deepcompare/branch/main/graph/badge.svg)](https://codecov.io/gh/anexia-it/python-deepcompare)
+[![PyPI](https://badge.fury.io/py/deepcompare.svg)](https://pypi.org/project/deepcompare/)
+[![Test Status](https://github.com/anexia/python-deepcompare/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/anexia/python-deepcompare/actions/workflows/test.yml)
+[![Codecov](https://codecov.io/gh/anexia/python-deepcompare/branch/main/graph/badge.svg)](https://codecov.io/gh/anexia/python-deepcompare)
 
-`python-deepcompare` is a library to deep compare data structures with each other. It can check if two data 
+`deepcompare` is a library to deep compare data structures with each other. It can check if two data 
 structures contain the same data, or if a data structure is a subset of another data structure. The library 
 supports `Sequence` (e.g. `list` or `tuple`) and `Mapping` (e.g. `dict`) types for the deep comparison.
 
@@ -14,13 +14,13 @@ supports `Sequence` (e.g. `list` or `tuple`) and `Mapping` (e.g. `dict`) types f
 With a [correctly configured](https://pipenv.pypa.io/en/latest/basics/#basic-usage-of-pipenv) `pipenv` toolchain:
 
 ```sh
-pipenv install python-deepcompare
+pipenv install deepcompare
 ```
 
 You may also use classic `pip` to install the package:
 
 ```sh
-pip install python-deepcompare
+pip install deepcompare
 ```
 
 # Getting started
