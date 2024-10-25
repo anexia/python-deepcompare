@@ -2,9 +2,9 @@
 -e .
 
 # Development dependencies
-pytest>=8.3,<8.4
-flake8>=7.1,<7.2
 codecov>=2.1,<2.2
+pre-commit>=4.0.1,<4.2
+pytest>=8.3,<8.4
 setuptools>=75
-wheel>=0.44
 twine>=5.1
+wheel>=0.44

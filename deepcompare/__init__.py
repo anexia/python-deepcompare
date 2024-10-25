@@ -2,13 +2,13 @@ from collections import abc
 from typing import Any
 
 __all__ = [
-    'compare',
-    'partial_compare',
+    "compare",
+    "partial_compare",
 ]
 
-_LIST_TYPES = (abc.Sequence, )
-_DICT_TYPES = (abc.Mapping, )
-_STR_TYPES = (str, bytes, )
+_LIST_TYPES = (abc.Sequence,)
+_DICT_TYPES = (abc.Mapping,)
+_STR_TYPES = (str, bytes)
 
 
 def compare(haystack: Any, subset: Any, strict: bool = False) -> bool:
@@ -64,8 +64,12 @@ def _compare(haystack: Any, subset: Any, partial: bool, strict: bool) -> bool:
 
     # if we compare two list types, we check each value of the haystack object to be equal to the
     # subset object. if we are working in partial mode, we ignore if the subset list is shorter than the haystack list.
-    elif isinstance(haystack, _LIST_TYPES) and not isinstance(haystack, _STR_TYPES) \
-            and isinstance(subset, _LIST_TYPES) and not isinstance(subset, _STR_TYPES):
+    elif (
+        isinstance(haystack, _LIST_TYPES)
+        and not isinstance(haystack, _STR_TYPES)
+        and isinstance(subset, _LIST_TYPES)
+        and not isinstance(subset, _STR_TYPES)
+    ):
         return _compare_sequence(haystack, subset, partial, strict)
 
     # for any other type, we just compare the two values.
@@ -73,7 +77,12 @@ def _compare(haystack: Any, subset: Any, partial: bool, strict: bool) -> bool:
         return haystack == subset
 
 
-def _compare_mapping(haystack: abc.Mapping, subset: abc.Mapping, partial: bool, strict: bool) -> bool:
+def _compare_mapping(
+    haystack: abc.Mapping,
+    subset: abc.Mapping,
+    partial: bool,
+    strict: bool,
+) -> bool:
     # check if all keys of the subset are also on the haystack object
     for key in subset.keys():
         if key not in haystack:
@@ -94,7 +103,12 @@ def _compare_mapping(haystack: abc.Mapping, subset: abc.Mapping, partial: bool, 
     return True
 
 
-def _compare_sequence(haystack: abc.Sequence, subset: abc.Sequence, partial: bool, strict: bool) -> bool:
+def _compare_sequence(
+    haystack: abc.Sequence,
+    subset: abc.Sequence,
+    partial: bool,
+    strict: bool,
+) -> bool:
     haystack_slice = haystack[:]
 
     # if we do not partially compare the lists, we need to check if the lengths of the two lists to compare are
