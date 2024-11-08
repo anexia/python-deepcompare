@@ -56,13 +56,13 @@ def _compare(haystack: Any, subset: Any, partial: bool, strict: bool) -> bool:
         if not issubclass(type(haystack), type(subset)):
             return False
 
-    # if we compare compare two dict types, we check each key of the haystack object to be equal to the
+    # if we compare two dict types, we check each key of the haystack object to be equal to the
     # subset object. if we are working in partial mode, we ignore if some keys are missing on the subset object.
     # however we check if all keys of the subset object are existing on the haystack object.
     if isinstance(haystack, _DICT_TYPES) and isinstance(subset, _DICT_TYPES):
         return _compare_mapping(haystack, subset, partial, strict)
 
-    # if we compare compare two list types, we check each value of the haystack object to be equal to the
+    # if we compare two list types, we check each value of the haystack object to be equal to the
     # subset object. if we are working in partial mode, we ignore if the subset list is shorter than the haystack list.
     elif isinstance(haystack, _LIST_TYPES) and not isinstance(haystack, _STR_TYPES) \
             and isinstance(subset, _LIST_TYPES) and not isinstance(subset, _STR_TYPES):
