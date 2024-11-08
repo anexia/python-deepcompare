@@ -5,7 +5,7 @@ deepcompare
 [![Test Status](https://github.com/anexia/python-deepcompare/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/anexia/python-deepcompare/actions/workflows/test.yml)
 [![Codecov](https://codecov.io/gh/anexia/python-deepcompare/branch/main/graph/badge.svg)](https://codecov.io/gh/anexia/python-deepcompare)
 
-`deepcompare` is a library to deep compare data structures with each other. It can check if two data
+`deepcompare` is a library to deeply compare data structures with each other. It can check if two data
 structures contain the same data, or if a data structure is a subset of another data structure. The library
 supports `Sequence` (e.g. `list` or `tuple`) and `Mapping` (e.g. `dict`) types for the deep comparison.
 
@@ -14,13 +14,13 @@ supports `Sequence` (e.g. `list` or `tuple`) and `Mapping` (e.g. `dict`) types f
 With a [correctly configured](https://pipenv.pypa.io/en/latest/basics/#basic-usage-of-pipenv) `pipenv` toolchain:
 
 ```sh
-pipenv install deepcompare
+pipenv install python-deepcompare
 ```
 
 You may also use classic `pip` to install the package:
 
 ```sh
-pip install deepcompare
+pip install python-deepcompare
 ```
 
 # Getting started

@@ -33,5 +33,5 @@ and patterns in the existing code-base.
 ### Contribution guidelines
  - Your code should follow PEP 8 -- Style Guide for Python Code
  - Your changes should be covered by unit-tests
- - If you add a unit-test within the `test_compare_flat.py`, make sure to add the equivalent test to the `test_partial_compare_flat.py` (and vice-versa).
- - If you add a unit-test within the `test_compare_deep.py`, make sure to add the equivalent test to the `test_partial_compare_deep.py` (and vice-versa).
+ - If you add a unit-test within the `test_compare_flat.py`, make sure to add the equivalent test to the `test_partial_compare_flat.py` (and vice versa).
+ - If you add a unit-test within the `test_compare_deep.py`, make sure to add the equivalent test to the `test_partial_compare_deep.py` (and vice versa).
