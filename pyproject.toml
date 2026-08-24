@@ -1,6 +1,51 @@
 [build-system]
-requires = [
-    "setuptools>=75",
-    "wheel",
-]
+requires = ["setuptools>=75", "wheel", "setuptools_scm[toml]>=8"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-deepcompare"
+dynamic = ["version"]
+description = "A library for deep comparison of data structures consisting of dict, list and tuple."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Anexia", email = "opensource@anexia-it.com"}]
+urls = {Homepage = "https://github.com/anexia/python-deepcompare"}
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+test = [
+  "coverage>=7.13.2",
+  "pytest>=8",
+]
+dev = [
+  "pre-commit>=4.5,<4.6",
+]
+build = [
+  "build>=1.4.0",
+  "twine>=6.2.0",
+  "wheel>=0.46.3",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["deepcompare*"]
+
+[tool.setuptools_scm]
